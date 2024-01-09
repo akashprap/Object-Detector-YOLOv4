@@ -3,11 +3,13 @@ import numpy as np
 from object_detection import ObjectDetection
 import math
 
-classes=["Person","Bird","Animal","Building","Tree"]
+
 font = cv2.FONT_HERSHEY_PLAIN
 color = (57, 255, 20)
 
 od = ObjectDetection()
+
+classes=od.load_class_names()
 
 cap=cv2.VideoCapture(0)
 
